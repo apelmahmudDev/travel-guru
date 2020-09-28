@@ -1,4 +1,4 @@
-const travelguruData = [
+const placeInfo = [
     {
     "id": "0524155313",
     "name": "Cox's Bazar",
@@ -81,4 +81,4 @@ const travelguruData = [
   },
 ]
 
-export default travelguruData;
+export default placeInfo;

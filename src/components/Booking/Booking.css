@@ -1,0 +1,13 @@
+.booking-form {
+ background: #fff;
+ padding: 5%;
+ border-radius: 5px;
+}
+
+.booking-form form input {
+    margin: 10px 0;
+    background: #F2F2F2;
+    border: none;
+    padding: 5px;
+    display: inline-block;
+}
