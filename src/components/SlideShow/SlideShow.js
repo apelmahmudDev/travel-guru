@@ -6,7 +6,7 @@ const SlideShow = (props) => {
 	const { name, img, body, id } = props.place;
 	return (
 		<div className="each-slide">
-			<div className="row">
+			<div className="row d-flex align-items-center justify-content-center" style={{height:'100vh'}}>
                 <div className="col-md-6">
                     <h1 className="text-light">{name}</h1>
                     <p className="text-light">{body}</p>

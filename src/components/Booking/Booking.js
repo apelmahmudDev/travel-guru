@@ -6,6 +6,14 @@ import placeInfo from '../../FakeData/placeInfo';
 
 const Booking = () => {
     const [placeData, setPlaceData] = useState([]);
+    const [booking, setBooking] = useState({
+        isBooking: false,
+        oringName: '',
+        destination: '',
+        from: '',
+        to: ''
+    })
+    console.log(booking)
 
 	// LOAD FAKEDATA
 	useEffect(() => {
@@ -25,7 +33,17 @@ const Booking = () => {
     }
 
     const { register, handleSubmit, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        const {originName, destination, from, to} = data;
+        const getBookingInfo = {
+            isBooking: true,
+            originName: originName,
+            destination: destination,
+            from: from,
+            to: to
+        }
+        setBooking(getBookingInfo);
+    }
 
     return (
         <div className="home__background">
@@ -39,7 +57,7 @@ const Booking = () => {
                         <div className="booking-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <label for="origin">Origin</label>
-                            <input name="oringname" defaultValue={originName} ref={register}  className="form-control"/>
+                            <input name="originName" defaultValue={originName} ref={register}  className="form-control"/>
                             <label for="destination">Destination</label>
                             <input name="destination" defaultValue={name} ref={register({ required: true })} className="form-control" />
                             {errors.destination && <span>This field is required</span>}

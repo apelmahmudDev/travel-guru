@@ -1,0 +1,13 @@
+.border-top {
+   border-top: 2px solid lightgray;
+}
+
+.booking-place-image {
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.google-map {
+    height: 80%;
+    border-radius: 10px;
+}

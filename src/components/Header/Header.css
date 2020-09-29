@@ -1,0 +1,13 @@
+/* .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+} */
+
+.navbar-brand img{
+    height: 45px;
+}
+
+.nav-link {
+    margin: 0 20px;
+}

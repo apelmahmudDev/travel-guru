@@ -1,0 +1,32 @@
+
+.login-form {
+    margin: 50px auto;
+    padding: 3%;
+    border-radius: 5px;
+    border: 2px solid #C4C4C4;
+}
+  
+.form input {
+    margin: 15px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.sign-btn {
+    margin: 5px 0;
+    font-weight: 500;
+    width: 350px;
+    border-radius: 30px;
+    border: 1px solid #C4C4C4; 
+}
+
+.sign-btn img {
+    margin-right: 10%;
+    height: 30px;
+}
