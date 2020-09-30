@@ -8,7 +8,6 @@ import { UserContext } from '../../App';
 const Booking = () => {
 	const [loggedInUser, setLoggedInUser, booking, setBooking] = useContext(UserContext);
     const [placeData, setPlaceData] = useState([]);
-    
 	// LOAD FAKEDATA
 	useEffect(() => {
 		const allPlace = placeInfo;
@@ -48,7 +47,7 @@ const Booking = () => {
 					style={{ height: '100vh' }}
 				>
 					<div className="col-md-6">
-						<h1 className="text-light">{name}</h1>
+						<h1 className="text-light booking-title">{name}</h1>
 						<p className="text-light">{body}</p>
 					</div>
 					<div className="col-md-6">
@@ -69,28 +68,31 @@ const Booking = () => {
 									className="form-control"
 								/>
 								{errors.destination && <span>This field is required</span>}
-								<div
-									style={{ display: 'flex', justifyContent: 'space-between' }}
-								>
-									<label>From</label>
-									<input
-										type="date"
-										name="from"
-										defaultValue="Cox's Bazar"
-										ref={register({ required: true })}
-									/>
-									<label>To</label>
-									<input
-										type="date"
-										name="to"
-										defaultValue="Cox's Bazar"
-										ref={register({ required: true })}
-									/>
+								{/* DATE PICKER */}
+								<div className="date-picker-wrap">
+									<div className="date-picker">
+										<label>From</label>
+										<input
+											type="date"
+											name="from"
+											defaultValue="Cox's Bazar"
+											ref={register({ required: true })}
+										/>
+									</div>
+									<div className="date-picker">
+										<label>To</label>
+										<input
+											type="date"
+											name="to"
+											defaultValue="Cox's Bazar"
+											ref={register({ required: true })}
+										/>
+									</div>
 								</div>
 								{booking.isBooking ? (
-									<Link to="/bookingPlace"><button className="btn btn-warning">Travel your place</button></Link>
+									<Link to="/bookingPlace"><button className="btn travel-btn">Travel your place</button></Link>
 								) : (
-									<input type="submit" className="form-control" />
+									<input type="submit" value="Start Booking" className="form-control booking-btn"/>
 								)}
 							</form>
 						</div>

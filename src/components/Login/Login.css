@@ -19,14 +19,16 @@
 }
 
 .sign-btn {
+    text-align: left;
     margin: 5px 0;
     font-weight: 500;
     width: 350px;
+    color: #000;
     border-radius: 30px;
     border: 1px solid #C4C4C4; 
 }
 
 .sign-btn img {
-    margin-right: 10%;
+    margin-right: 15%;
     height: 30px;
 }

@@ -175,7 +175,7 @@ const Login = () => {
 	return (
 		<div className="container">
 			<div className="col-md-5 login-form">
-				<h3>Create an account</h3>
+				<h4><strong>{newUser ? 'Create an account': 'Login'}</strong></h4>
 				{/* CUSTOM LOGIN FORM */}
 				<form className="form" onSubmit={handleSubmit}>
 					{newUser && (
@@ -226,7 +226,7 @@ const Login = () => {
 					)}
 					<input
 						type="submit"
-						value="Create an Account"
+						value={newUser ? 'Create an Account': 'Login'}
 						className="form-control bg-warning"
 					/>
 				</form>

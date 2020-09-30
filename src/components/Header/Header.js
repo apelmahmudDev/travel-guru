@@ -3,6 +3,7 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import travelLogo from '../../images/icon/logo.png';
 import { UserContext } from '../../App';
+import FaceIcon from '@material-ui/icons/Face';
 
 const Header = () => {
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -39,7 +40,7 @@ const Header = () => {
 						<Link className="nav-link active" to="/">
 							News <span className="sr-only">(current)</span>
 						</Link>
-						<Link className="nav-link" to="/">
+						<Link className="nav-link" to="/bookingPlace">
 							Destination
 						</Link>
 						<Link className="nav-link" to="/">
@@ -48,7 +49,7 @@ const Header = () => {
 						<Link className="nav-link" to="/">
 							Contact
 						</Link>
-						{loggedInUser.isSignedIn ? <p className="mt-2"><strong>{loggedInUser.name}</strong></p> :
+						{loggedInUser.isSignedIn ? <p className="mt-2"><FaceIcon /><strong>{loggedInUser.name}</strong></p> :
 						 <Link className="nav-link login-link" to="/login">Login</Link>}
 					</div>
 				</div>

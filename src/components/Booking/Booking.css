@@ -1,13 +1,53 @@
+.booking-title {
+    font-weight: bold;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
 .booking-form {
- background: #fff;
- padding: 5%;
- border-radius: 5px;
+    background: #fff;
+    padding: 5%;
+    border-radius: 5px;
+}
+
+form label {
+    color: #818181;
 }
 
 .booking-form form input {
+    font-weight: bold;
     margin: 10px 0;
     background: #F2F2F2;
+    color: #000;
     border: none;
     padding: 5px;
+    padding-left: 1em;
     display: inline-block;
+}
+
+.booking-form form input:focus {
+    background: #F2F2F2;
+}
+
+.date-picker-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column
+}
+
+.travel-btn {
+    margin-top: 5px;
+    width: 100%;
+    color: #000;
+    background: #fdc974;
+}
+
+.booking-btn {
+    color: #000;
+    font-weight: 500 !important;
+    background: #F9A51A !important;
 }
