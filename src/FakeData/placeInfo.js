@@ -7,7 +7,7 @@ const placeInfo = [
     "description": {
         "roomeONe": {
             "img": "https://i.imgur.com/9KA63J2.png",
-            "tittle": "Light bright airy stylish apt & safe peaceful stay",
+            "title": "Light bright airy stylish apt & safe peaceful stay",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -17,7 +17,7 @@ const placeInfo = [
         },
         "roomeTwo": {
             "img": "https://i.imgur.com/Wgf9mn2.png",
-            "tittle": "Apartment in Lost Panorama",
+            "title": "Apartment in Lost Panorama",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -27,7 +27,7 @@ const placeInfo = [
         },
         "roomeThree": {
             "img": "https://i.imgur.com/oUoQrPY.png",
-            "tittle": "A Lounge & Pool (r&r + b&b)",
+            "title": "A Lounge & Pool (r&r + b&b)",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -50,7 +50,7 @@ const placeInfo = [
     "description": {
         "roomeONe": {
             "img": "https://cdn.vox-cdn.com/thumbor/-K0VWk5lzMODm0IdCIhGYC40ahI=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10686791/Hilton_Panama_Alienware_Room_Gaming_hotel_room_12.jpg",
-            "tittle": "Light bright airy stylish apt & safe peaceful stay",
+            "title": "Light bright airy stylish apt & safe peaceful stay",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -60,7 +60,7 @@ const placeInfo = [
         },
         "roomeTwo": {
             "img": "https://st.hzcdn.com/simgs/1131a6990e8f8fcb_14-3211/home-design.jpg",
-            "tittle": "Apartment in Lost Panorama",
+            "title": "Apartment in Lost Panorama",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -70,7 +70,7 @@ const placeInfo = [
         },
         "roomeThree": {
             "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpNI5uZKbs0w0_k_PU790Q21Q59NAUlcZZ5Q&usqp=CAU",
-            "tittle": "A Lounge & Pool (r&r + b&b)",
+            "title": "A Lounge & Pool (r&r + b&b)",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -92,7 +92,7 @@ const placeInfo = [
     "description": {
         "roomeONe": {
             "img": "https://i.imgur.com/9KA63J2.png",
-            "tittle": "https://media-cdn.tripadvisor.com/media/photo-s/0e/bc/15/b4/sundarban-hotel.jpg",
+            "title": "https://media-cdn.tripadvisor.com/media/photo-s/0e/bc/15/b4/sundarban-hotel.jpg",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -102,7 +102,7 @@ const placeInfo = [
         },
         "roomeTwo": {
             "img": "https://media-cdn.tripadvisor.com/media/photo-s/06/9d/48/9c/our-resort.jpg",
-            "tittle": "Apartment in Lost Panorama",
+            "title": "Apartment in Lost Panorama",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,
@@ -112,7 +112,7 @@ const placeInfo = [
         },
         "roomeThree": {
             "img": "https://media-cdn.tripadvisor.com/media/photo-s/10/de/27/b8/royal-sundarban-wild.jpg",
-            "tittle": "A Lounge & Pool (r&r + b&b)",
+            "title": "A Lounge & Pool (r&r + b&b)",
             "guest": 4,
             "bedrooms": 2,
             "beds": 2,

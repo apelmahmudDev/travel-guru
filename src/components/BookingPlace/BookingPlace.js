@@ -3,7 +3,6 @@ import { UserContext } from '../../App';
 import placeInfo from '../../FakeData/placeInfo';
 import GoogleMap from '../GoogleMap/GoogleMap';
 import './BookingPlace.css';
-import starIcon from '../../images/icon/star_1_.png';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import GradeIcon from '@material-ui/icons/Grade';
 import { Link } from 'react-router-dom';

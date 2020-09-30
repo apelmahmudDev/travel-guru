@@ -154,24 +154,24 @@ const Login = () => {
 	};
 
 	//SIGN OUT
-	const handleGoogleSignOut = () => {
-		firebase
-			.auth()
-			.signOut()
-			.then((res) => {
-				const newUserInfo = {
-					isSignedIn: false,
-					name: '',
-					email: '',
-					photo: '',
-				};
-				setUser(newUserInfo);
-			})
-			.catch((err) => {
-				// An error happened.
-				console.log(err.message);
-			});
-	};
+	// const handleGoogleSignOut = () => {
+	// 	firebase
+	// 		.auth()
+	// 		.signOut()
+	// 		.then((res) => {
+	// 			const newUserInfo = {
+	// 				isSignedIn: false,
+	// 				name: '',
+	// 				email: '',
+	// 				photo: '',
+	// 			};
+	// 			setUser(newUserInfo);
+	// 		})
+	// 		.catch((err) => {
+	// 			// An error happened.
+	// 			console.log(err.message);
+	// 		});
+	// };
 	return (
 		<div className="container">
 			<div className="col-md-5 login-form">

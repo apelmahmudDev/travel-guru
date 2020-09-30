@@ -11,6 +11,7 @@ import Header from './components/Header/Header';
 import BookingPlace from './components/BookingPlace/BookingPlace';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 export const UserContext = createContext();
 
@@ -34,6 +35,9 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </div>

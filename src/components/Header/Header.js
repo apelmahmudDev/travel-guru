@@ -37,16 +37,16 @@ const Header = () => {
 						</button>
 					</form>
 					<div className="navbar-nav ml-auto">
-						<Link className="nav-link active" to="/">
+						<Link className="nav-link active" to="/news">
 							News <span className="sr-only">(current)</span>
 						</Link>
 						<Link className="nav-link" to="/bookingPlace">
 							Destination
 						</Link>
-						<Link className="nav-link" to="/">
+						<Link className="nav-link" to="/blog">
 							Blog
 						</Link>
-						<Link className="nav-link" to="/">
+						<Link className="nav-link" to="/contact">
 							Contact
 						</Link>
 						{loggedInUser.isSignedIn ? <p className="mt-2"><FaceIcon /><strong>{loggedInUser.name}</strong></p> :
