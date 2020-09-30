@@ -10,16 +10,17 @@ import {
 import Header from './components/Header/Header';
 import BookingPlace from './components/BookingPlace/BookingPlace';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState([]);
+  const [booking, setBooking] = useState([]);
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser, booking, setBooking]}>
       <Router>
         <div className="App">
-          <h1>{loggedInUser.name}</h1>
         <Header></Header>
           <Switch>
             <Route exact path="/">
@@ -28,9 +29,9 @@ function App() {
             <Route path="/booking/:placeId">
               <Booking></Booking>
             </Route>
-            <Route path="/bookingPlace">
+            <PrivateRoute path="/bookingPlace">
               <BookingPlace></BookingPlace>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

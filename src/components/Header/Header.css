@@ -11,3 +11,10 @@
 .nav-link {
     margin: 0 20px;
 }
+
+.login-link {
+    background-color: #ffc107;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+}

@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from '../../firebase.config';
 import googleIcon from '../../images/icon/google.png';
 import facebookIcon from '../../images/icon/fb.png';
+import { UserContext } from '../../App';
+import { useHistory, useLocation } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+
+    let history = useHistory();
+    let location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 	const [newUser, setNewUser] = useState(false);
 	const [user, setUser] = useState({
 		isSignedIn: false,
@@ -35,7 +43,9 @@ const Login = () => {
 					email: email,
 					photo: photoURL,
 				};
-				setUser(newUserInfo);
+                setUser(newUserInfo);
+                setLoggedInUser(newUserInfo);
+                history.replace(from);
 			})
 			.catch((err) => {
 				console.log(err.message);
@@ -55,7 +65,9 @@ const Login = () => {
 					email: email,
 					photo: photoURL,
 				};
-				setUser(newUserInfo);
+                setUser(newUserInfo);
+                setLoggedInUser(newUserInfo);
+                history.replace(from);
 			})
 			.catch((err) => {
 				console.log(err.message);
@@ -91,7 +103,9 @@ const Login = () => {
 					newUserInfo.error = '';
 					newUserInfo.success = true;
 					updateUser(user.name, user.lname);
-					setUser(newUserInfo);
+                    setUser(newUserInfo);
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from);
 				})
 				.catch((err) => {
 					const newUserInfo = { ...user };
@@ -110,7 +124,9 @@ const Login = () => {
 					newUserInfo.isSignedIn = true;
 					newUserInfo.error = '';
 					newUserInfo.success = true;
-					setUser(newUserInfo);
+                    setUser(newUserInfo);
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from);
 				})
 				.catch((err) => {
 					const newUserInfo = { ...user };
@@ -158,10 +174,6 @@ const Login = () => {
 	};
 	return (
 		<div className="container">
-			{user.isSignedIn && <h3>User name: {user.name}</h3>}
-			{user.isSignedIn && <h4>Email: {user.email}</h4>}
-			{user.isSignedIn && <p>Last Name: {user.lname}</p>}
-
 			<div className="col-md-5 login-form">
 				<h3>Create an account</h3>
 				{/* CUSTOM LOGIN FORM */}

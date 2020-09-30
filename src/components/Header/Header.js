@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import travelLogo from '../../images/icon/logo.png';
+import { UserContext } from '../../App';
 
 const Header = () => {
+	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 	return (
-		<nav class="navbar navbar-expand-lg navbar-light bg-default">
+		<nav className="navbar navbar-expand-lg navbar-light bg-default">
 			<div className="container">
-				<Link class="navbar-brand" to="/">
+				<Link className="navbar-brand" to="/">
 					<img src={travelLogo} alt="" />
 				</Link>
 				<button
-					class="navbar-toggler"
+					className="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
 					data-target="#navbarNavAltMarkup"
@@ -19,36 +21,35 @@ const Header = () => {
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
-					<span class="navbar-toggler-icon"></span>
+					<span className="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<form class="form-inline my-2 my-lg-0 ml-auto">
+				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<form className="form-inline my-2 my-lg-0 ml-auto">
 						<input
-							class="form-control mr-sm-2"
+							className="form-control mr-sm-2"
 							type="search"
 							placeholder="Search"
 							aria-label="Search"
 						/>
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+						<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
 							Search
 						</button>
 					</form>
-					<div class="navbar-nav ml-auto">
-						<Link class="nav-link active" to="/">
-							News <span class="sr-only">(current)</span>
+					<div className="navbar-nav ml-auto">
+						<Link className="nav-link active" to="/">
+							News <span className="sr-only">(current)</span>
 						</Link>
-						<Link class="nav-link" to="/">
+						<Link className="nav-link" to="/">
 							Destination
 						</Link>
-						<Link class="nav-link" to="/">
+						<Link className="nav-link" to="/">
 							Blog
 						</Link>
-						<Link class="nav-link" to="/">
+						<Link className="nav-link" to="/">
 							Contact
 						</Link>
-						<Link class="nav-link" to="/">
-							<button className="btn btn-warning">Login</button>
-						</Link>
+						{loggedInUser.isSignedIn ? <p className="mt-2"><strong>{loggedInUser.name}</strong></p> :
+						 <Link className="nav-link login-link" to="/login">Login</Link>}
 					</div>
 				</div>
 			</div>

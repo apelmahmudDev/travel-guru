@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
+import placeInfo from '../../FakeData/placeInfo';
+import GoogleMap from '../GoogleMap/GoogleMap';
 import './BookingPlace.css';
 
 const ShowPlace = () => {
+    const [loggedInUser, setLoggedInUser, booking, setBooking] = useContext(UserContext);
+    const [bookingInfo, setBookingInfo] = useState([]);
+    
+    // LOAD FAKEDATA
+	useEffect(() => {
+		const allPlace = placeInfo;
+		setBookingInfo(allPlace);
+    }, []);
+    
+    const selectedPlace = bookingInfo.find(place => place.id === booking.placeId);
+    console.log('Yes',selectedPlace);
+	let name, latitude, longitude;
+	if (selectedPlace) {
+        name = selectedPlace.name;
+		latitude = selectedPlace.lat;
+		longitude = selectedPlace.lng;
+	}
+
     return (
         <div className="container">
             <div className="border-top">
-                <p>252 stays Apr 13-17 3 guests</p>
-                <h4>Stay in Cox's Bazar</h4>
+                <p>252 stays {booking.from} - {booking.to} 3 guests</p>
+                <h4>Stay in {name}</h4>
             </div>
             <div className="row">
                 <div className="col-md-6">
@@ -42,7 +63,7 @@ const ShowPlace = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-                   <img className="img-fluid google-map" src="https://thefinancialexpress.com.bd/public/uploads/1509263300.jpg" alt=""/>
+                   <GoogleMap lat={latitude} lng={longitude}></GoogleMap>
                 </div>
             </div>
         </div>

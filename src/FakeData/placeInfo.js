@@ -37,7 +37,10 @@ const placeInfo = [
         }
     },
     "origin": "Dhaka",
-    "destination": "Cox's Bazar"
+    "destination": "Cox's Bazar",
+    "lat": 21.4272,
+    "lng": 92.0058
+
   }, 
   {
     "id": "0364784121",
@@ -57,11 +60,13 @@ const placeInfo = [
         },
     },
     "origin": "Dhaka",
-    "destination": "Sreemangal"
+    "destination": "Sreemangal",
+    "lat": 24.3065,
+    "lng": 91.7296
   },  
   {
     "id": "6305247714",
-    "name": "Sundarbans",
+    "name": "Sundarban",
     "img": "https://i.imgur.com/xthFXpd.png",
     "body": "The Sundarbans is a mangrove area in the delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans from the Hooghly River in India's state of West Bengal to the Baleswar River in Bangladesh.",
     "description": {
@@ -77,7 +82,9 @@ const placeInfo = [
         },
     },
     "origin": "Dhaka",
-    "destination": "Sundarbans"
+    "destination": "Sundarban",
+    "lat": 21.9497,
+    "lng":  89.1833
   },
 ]
 
