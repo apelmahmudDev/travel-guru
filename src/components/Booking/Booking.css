@@ -1,3 +1,7 @@
+.booking-container {
+    height: 100vh;
+}
+
 .booking-title {
     font-weight: bold;
     font-size: 3em;
@@ -50,4 +54,21 @@ form label {
     color: #000;
     font-weight: 500 !important;
     background: #F9A51A !important;
+}
+
+
+
+/* RESPONSIVE-AREA */
+
+@media (max-width: 992px) {
+    .booking-container {
+        height: 110vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .booking-title {
+        margin-top: 40px;
+        font-size: 2em;
+    }
 }

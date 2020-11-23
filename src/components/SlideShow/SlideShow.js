@@ -13,7 +13,7 @@ const SlideShow = (props) => {
 			>
 				<div className="col-md-6">
 					<h1 className="text-light slideshow-title">{name}</h1>
-					<p className="text-light">{body}</p>
+					<p className="text-light my-3">{body}</p>
 					<Link to={`/booking/${id}`}>
 						<button className="btn main-btn">Booking <ArrowForward /></button>
 					</Link>

@@ -9,8 +9,25 @@
     color: #000;
 }
 
-.slideshow-img {
-    border: 4px solid #F9A51A;
-    border-radius: 30px;
+    .slideshow-img {
+        border: 4px solid #F9A51A;
+        border-radius: 30px;
+    }
+
+
+/* RESPONSIVE-AREA */
+
+@media (max-width: 767px) {
+    .slideshow-title {
+        font-size: 2em;
+    }
+    .each-slide {
+        margin-top: 40px;
+    }
 }
 
+@media (max-width: 576px) {
+    .slideshow-img {
+        margin-bottom: 5%;
+    }
+}
