@@ -8,6 +8,15 @@
 }
 
 .google-map {
-    height: 80%;
     border-radius: 10px;
 }
+
+
+
+/* RESPONSIVE-AREA */
+@media(max-width: 767px){
+    .google-map {
+        height: 100vh;
+    }
+}
+
