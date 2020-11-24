@@ -17,15 +17,12 @@ const Home = () => {
 	return (
 		<div className="home__background">
 			{/* SLIDE SHOW */}
-			<div className="container">
+			<div className="container" style={{ height: '100vh' }}>
 				<div className="slide-container">
 					<Slide>
-						{
-							placeData.map(place => <SlideShow 
-								place={place}
-								key={place.id}
-								></SlideShow>)
-						}
+						{placeData.map((place) => (
+							<SlideShow place={place} key={place.id}></SlideShow>
+						))}
 					</Slide>
 				</div>
 			</div>

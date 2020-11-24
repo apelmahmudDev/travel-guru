@@ -10,12 +10,14 @@
     "@testing-library/user-event": "^7.2.1",
     "firebase": "^7.21.1",
     "google-maps-react": "^2.0.6",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.8.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-slideshow-image": "^3.3.0"
+    "react-slideshow-image": "^3.3.0",
+    "swiper": "^6.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
